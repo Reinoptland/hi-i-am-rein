@@ -28,8 +28,13 @@ function hideCurrentSlide(){
     polaroids[slideCounter].style.display = 'none'
 }
 
+function getRandomNumberBetween(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 function displayCurrentSlide(){
-    polaroids[slideCounter].style.display = ''
+    polaroids[slideCounter].style.display = 'flex'
+    polaroids[slideCounter].style.transform = `rotate(${getRandomNumberBetween(-5, 5)}deg)`
     textContainer.innerHTML = slideTextContent[slideCounter]
 }
 
@@ -74,7 +79,7 @@ function previous(){
 }
 
 function start(){
-    polaroids[slideCounter].style.display = ''
+    polaroids[slideCounter].style.display = 'flex'
     textContainer.innerHTML = slideTextContent[slideCounter]
     hidePrevButton()
     nextButton.addEventListener('click', next)

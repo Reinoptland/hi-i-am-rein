@@ -47,7 +47,6 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* background-color: red; */
     height: 40vh;
 }
 
@@ -71,7 +70,15 @@ a {
     background-color: #309BCA;
     height: 2rem;
     width: 3rem;
+    animation: action 1s infinite alternate;
 }
+
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+
 
 /* Make cool clip paths like these arrows at https://bennettfeely.com/clippy/ */
 
@@ -90,18 +97,24 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: chartreuse; */
     height: 50vh;
 }
 
 .polaroid {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #D1D2CC;
     transform: rotate(2.5deg);
+    animation: rotate 3s infinite alternate;
 }
+
+@keyframes rotate {
+    0% { transform: rotate(-10deg); }
+    100% { transform: translateY(10deg); }
+}
+
 
 .polaroid__image {
     padding: 1rem;
