@@ -1,0 +1,145 @@
+/* Simple reset from  https://alligator.io/css/minimal-css-reset/ */
+
+html {
+    box-sizing: border-box;
+    font-size: calc(1em + 1vw) 
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: red;
+    height: 50vh;
+}
+
+.textContainer__text {
+    font-family: 'Lato', sans-serif;
+    max-width: 60vw;
+    margin: 1rem;
+}
+
+.textContainer__text--header {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.textContainer__text--body {
+    font-family: 'Lato', sans-serif;
+}
+
+.textContainer__arrow {
+    background-color: black;
+    height: 2rem;
+    width: 3rem;
+}
+
+/* Make cool clip paths like these arrows at https://bennettfeely.com/clippy/ */
+
+.textContainer__arrow--right {
+    margin-right: 2vw;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+.textContainer__arrow--left {
+    margin-left: 2vw;
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: chartreuse;
+    height: 50vh;
+}
+
+.polaroid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transform: rotate(12deg);
+}
+
+.polaroid__image {
+    padding: 1rem;
+}
+
+.polaroid__image--landscape {
+    max-width: 80vw;
+    height: auto;
+}
+
+.polaroid__image--portrait {
+    max-height: 40vh;
+    width: auto;
+}
+
+.polaroid__caption {
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+    padding: 0 2vw 2vw 2vw;
+    color: #1c4ecc;
+    filter: blur(0.4px);
+}
+
+.u-box-shadow {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+@media (min-width: 600px) { 
+
+    .textContainer {
+        height: 35vh;
+        max-width: 80vw;
+    }
+
+    .imageContainer {
+        height: 65vh;
+        max-width: 80vw;
+    }
+
+    .polaroid__image--landscape {
+        max-width: 550px;
+        height: auto;
+    }
+    
+    .polaroid__image--portrait {
+        max-height: 425px;
+        width: auto;
+    }
+
+}
