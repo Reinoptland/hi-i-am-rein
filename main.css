@@ -51,11 +51,12 @@ body {
 }
 
 .textContainer__text--header {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Hi Melody', cursive;
+    font-weight: 900;
 }
 
 .textContainer__text--body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .textContainer__arrow {
@@ -109,7 +110,8 @@ body {
 }
 
 .polaroid__caption {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Hi Melody', cursive;
+    font-weight: 100;
     text-align: center;
     padding: 0 2vw 2vw 2vw;
     color: #1c4ecc;
@@ -142,4 +144,16 @@ body {
         width: auto;
     }
 
+
+}
+
+@media (min-width: 1000px){
+    .textContainer {
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    .textContainer__slideControls {
+        align-self: flex-end;
+    }
 }
