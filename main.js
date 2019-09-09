@@ -170,7 +170,7 @@ const slideTextContent = [
         <h2 class="textContainer__text--header">Full circle</h2>
         <p class="textContainer__text--body">
             Enjoyed teaching React to my colleagues so much that in 2018 I asked Wouter & Rembert if I could teach at Codaisseur 
-            - and they accepted! So now I am teaching again fulltime, this time to adults! 
+            - and they accepted! So now I am going to teach you! See you soon!
         </p>
     ` ,
 
