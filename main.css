@@ -2,7 +2,10 @@
 
 html {
     box-sizing: border-box;
-    font-size: calc(0.8em + 1vw) 
+
+    /* Setting some font related properties opn html to inherit */
+    font-size: calc(0.8em + 1vw);
+    line-height: 1.5;
 }
   
 *, *:before, *:after {
@@ -45,7 +48,7 @@ a {
     align-items: center;
     justify-content: space-between;
     /* background-color: red; */
-    height: 50vh;
+    height: 40vh;
 }
 
 .textContainer__text {
