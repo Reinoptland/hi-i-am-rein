@@ -60,23 +60,40 @@ a {
     color: #309BCA;
     font-family: 'Hi Melody', cursive;
     font-weight: 900;
+    animation: fadein 1s;
 }
 
 .textContainer__text--body {
     font-family: 'Open Sans Condensed', sans-serif;
+    animation: fadein 4s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .textContainer__arrow {
     background-color: #309BCA;
     height: 2rem;
     width: 3rem;
-    animation: action 1s infinite alternate;
+    animation: up-down 1s infinite alternate;
 }
 
-@keyframes action {
+@keyframes up-down {
     0% { transform: translateY(0); }
     100% { transform: translateY(-10px); }
 }
+
+.textContainer__arrow:hover {
+    animation: left-right 0.5s infinite alternate;
+}
+
+@keyframes left-right {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-10px); }
+}
+
 
 
 

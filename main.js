@@ -130,9 +130,8 @@ const slideTextContent = [
     `
         <h2 class="textContainer__text--header">The Sensei</h2>
         <p class="textContainer__text--body">
-            At the TOC I decided I wanted to do 8 weeks of progamming at Codaisseur
-            and then continue to be a primary school teacher.
-            Then my programming teacher Ben said to me: "After 8 weeks you'll still be bad."
+            I wanted to do 8 weeks of progamming at Codaisseur and continue teaching primary school.
+            My programming teacher Ben said to me: "After 8 weeks you'll still be bad. Go work for a company afterwards." 
         </p>
     ` ,
     `
