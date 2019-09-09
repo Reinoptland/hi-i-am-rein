@@ -2,7 +2,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: calc(1em + 1vw) 
+    font-size: calc(0.8em + 1vw) 
 }
   
 *, *:before, *:after {
@@ -27,7 +27,7 @@ img {
 body {
     height: 100vh;
     width: 100vw;
-    background-color: aqua;
+    background-color: #FABF01;
     margin: 0px;
     display: flex;
     align-items: center;
@@ -35,12 +35,16 @@ body {
     flex-direction: column
 }
 
+a {
+    color: #309BCA;
+}
+
 .textContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: red;
+    /* background-color: red; */
     height: 50vh;
 }
 
@@ -51,6 +55,7 @@ body {
 }
 
 .textContainer__text--header {
+    color: #309BCA;
     font-family: 'Hi Melody', cursive;
     font-weight: 900;
 }
@@ -60,7 +65,7 @@ body {
 }
 
 .textContainer__arrow {
-    background-color: black;
+    background-color: #309BCA;
     height: 2rem;
     width: 3rem;
 }
@@ -82,7 +87,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     height: 50vh;
 }
 
@@ -91,8 +96,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    transform: rotate(12deg);
+    background-color: #D1D2CC;
+    transform: rotate(2.5deg);
 }
 
 .polaroid__image {
@@ -114,7 +119,7 @@ body {
     font-weight: 100;
     text-align: center;
     padding: 0 2vw 2vw 2vw;
-    color: #1c4ecc;
+    color: #309BCA;
     filter: blur(0.4px);
 }
 
@@ -144,7 +149,6 @@ body {
         width: auto;
     }
 
-
 }
 
 @media (min-width: 1000px){
@@ -156,4 +160,5 @@ body {
     .textContainer__slideControls {
         align-self: flex-end;
     }
+
 }
