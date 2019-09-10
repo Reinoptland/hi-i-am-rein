@@ -97,7 +97,7 @@ const slideTextContent = [
     `
         <h2 class="textContainer__text--header">Hello my name is Rein</h2>
         <p class="textContainer__text--body">
-            I am JavaScript teacher here. Welcome to the Academy. 
+            I am a JavaScript teacher here. Welcome to the Academy. 
             That's me on the right.
             Debugging code with Duc & Maudy, two of my former students 
             (they are pros with jobs now!)
@@ -116,7 +116,7 @@ const slideTextContent = [
         <p class="textContainer__text--body">
             My favorite creative outlet is making games for groups of people. 
             I've built games like: War (seen below),
-            The Hunger Games, Midnight Zombie Attack, Multiplayer Catan for 120 people, & The GoldRush.
+            The Hunger Games, Midnight Zombie Attack, Multiplayer Catan for 120 people & The GoldRush.
         </p>
     ` ,
     `
@@ -130,7 +130,7 @@ const slideTextContent = [
         <h2 class="textContainer__text--header">A taste of Code ...</h2>
         <p class="textContainer__text--body">
             I became curious about "best practice" in programming so I could teach the children in a better way. 
-            So I visited a workshop to learn programming for adults: 
+            So I visited a workshop to learn programming for adults - 
             Codaisseur's own: Taste of Code!
         </p>
     ` ,
@@ -169,8 +169,8 @@ const slideTextContent = [
     `
         <h2 class="textContainer__text--header">Kabisa</h2>
         <p class="textContainer__text--body">
-            I joined a very professional digital agency called Kabisa. Everyone on my time was way better than me. 
-            But I knew React so I got to teach it to some of colleagues as part of my first assignment.
+            I joined a very professional digital agency called Kabisa. Everyone on my team was way better than me. 
+            But I knew React! So I got to teach it to some of colleagues as part of my first assignment.
         </p>
     ` ,
     `
