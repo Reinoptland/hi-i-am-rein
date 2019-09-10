@@ -100,7 +100,7 @@ const slideTextContent = [
             I am JavaScript teacher here. Welcome to the Academy. 
             That's me on the right.
             Debugging code with Duc & Maudy, two of my former students 
-            (they are pro's now!)
+            (they are pros with jobs now!)
         </p>
     ` ,
     `
@@ -115,8 +115,8 @@ const slideTextContent = [
         <h2 class="textContainer__text--header">Making games</h2>
         <p class="textContainer__text--body">
             My favorite creative outlet is making games for groups of people. 
-            I've also built games like: War (seen below),
-            Multiplayer Catan for 120 people, The Hunger Games, Midnight Zombie Attack & The GoldRush.
+            I've built games like: War (seen below),
+            The Hunger Games, Midnight Zombie Attack, Multiplayer Catan for 120 people, & The GoldRush.
         </p>
     ` ,
     `
