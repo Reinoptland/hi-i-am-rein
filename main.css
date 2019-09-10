@@ -60,12 +60,12 @@ a {
     color: #309BCA;
     font-family: 'Hi Melody', cursive;
     font-weight: 900;
-    animation: fadein 1s;
+    animation: fadein 2s;
 }
 
 .textContainer__text--body {
     font-family: 'Open Sans Condensed', sans-serif;
-    animation: fadein 4s;
+    animation: fadein 6s;
 }
 
 @keyframes fadein {
@@ -119,12 +119,14 @@ a {
 
 .polaroid {
     display: none;
+    opacity: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #D1D2CC;
     transform: rotate(2.5deg);
     animation: rotate 3s infinite alternate;
+    transition: 1.2s;
 }
 
 @keyframes rotate {
@@ -158,6 +160,18 @@ a {
 
 .u-box-shadow {
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.u-display-none {
+    display: none;
+}
+
+.u-display-flex {
+    display: flex;
+}
+
+.u-visible {
+    opacity: 1;
 }
 
 @media (min-width: 600px) { 

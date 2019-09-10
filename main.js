@@ -5,7 +5,7 @@ const prevButton = document.getElementById('prev')
 let slideCounter = 0
 
 for (const polaroid of polaroids) {
-    polaroid.style.display = 'none'
+    polaroid.classList.add('u-display-none')
 }
 
 function hidePrevButton(){
@@ -24,24 +24,30 @@ function displayNextButton(){
     nextButton.style.opacity = 1
 }
 
-function hideCurrentSlide(){
-    polaroids[slideCounter].style.display = 'none'
-}
-
 function getRandomNumberBetween(min, max) {
     return Math.random() * (max - min) + min;
 }
 
 function displayCurrentSlide(){
-    polaroids[slideCounter].style.display = 'flex'
-    polaroids[slideCounter].style.transform = `rotate(${getRandomNumberBetween(-5, 5)}deg)`
-    textContainer.innerHTML = slideTextContent[slideCounter]
+    polaroids[slideCounter].classList.add('u-display-flex')
+    setTimeout(function(){
+        polaroids[slideCounter].classList.add('u-visible')
+    }, 20)
 }
 
 function switchSlide(number){
-    hideCurrentSlide()
+    const currentSlideNumber = slideCounter
+    polaroids[currentSlideNumber].classList.remove('u-visible')
+    polaroids[currentSlideNumber].addEventListener('transitionend', function(){
+        polaroids[currentSlideNumber].classList.remove('u-display-flex')
+        polaroids[currentSlideNumber].classList.add('u-display-none')
+
+        displayCurrentSlide()
+    })
+
     slideCounter = slideCounter + number
-    displayCurrentSlide()
+    textContainer.innerHTML = slideTextContent[slideCounter]
+
 }
 
 function next(){
@@ -79,8 +85,9 @@ function previous(){
 }
 
 function start(){
-    polaroids[slideCounter].style.display = 'flex'
+    polaroids[slideCounter].classList.add('u-display-flex')
     textContainer.innerHTML = slideTextContent[slideCounter]
+    displayCurrentSlide()
     hidePrevButton()
     nextButton.addEventListener('click', next)
     prevButton.addEventListener('click', previous)
