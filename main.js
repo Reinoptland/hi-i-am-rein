@@ -2,6 +2,8 @@ const polaroids = document.getElementsByClassName('polaroid')
 const textContainer = document.getElementById('text')
 const nextButton = document.getElementById('next')
 const prevButton = document.getElementById('prev')
+const breadCrumbsContainer = document.getElementById('breadCrumbs')
+const breadCrumbs = document.getElementsByClassName('breadCrumbs__crumb')
 let slideCounter = 0
 
 for (const polaroid of polaroids) {
@@ -38,6 +40,7 @@ function displayCurrentSlide(){
 function switchSlide(number){
     const currentSlideNumber = slideCounter
     polaroids[currentSlideNumber].classList.remove('u-visible')
+    breadCrumbs[currentSlideNumber].classList.remove('breadCrumbs__crumb--current')
     polaroids[currentSlideNumber].addEventListener('transitionend', function(){
         polaroids[currentSlideNumber].classList.remove('u-display-flex')
         polaroids[currentSlideNumber].classList.add('u-display-none')
@@ -47,7 +50,7 @@ function switchSlide(number){
 
     slideCounter = slideCounter + number
     textContainer.innerHTML = slideTextContent[slideCounter]
-
+    breadCrumbs[slideCounter].classList.add('breadCrumbs__crumb--current')
 }
 
 function next(){
@@ -85,6 +88,15 @@ function previous(){
     switchSlide(-1)
 }
 
+function displayBreadCrumbs(){
+    for (let index = 0; index < slideTextContent.length; index++) {
+        const el = document.createElement('span')
+        el.classList.add('breadCrumbs__crumb')        
+        el.innerText = '.'
+        breadCrumbsContainer.appendChild(el)
+    }
+}
+
 function start(){
     polaroids[slideCounter].classList.add('u-display-flex')
     textContainer.innerHTML = slideTextContent[slideCounter]
@@ -102,6 +114,7 @@ function start(){
                 return
         }
     })
+    displayBreadCrumbs()
 }
 
 const slideTextContent = [

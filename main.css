@@ -42,6 +42,23 @@ a {
     color: #309BCA;
 }
 
+.breadCrumbs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+}
+
+.breadCrumbs__crumb {
+    font-family: 'Hi Melody', cursive;
+    font-size: 2rem;
+    transition: 0.2s;
+}
+
+.breadCrumbs__crumb--current {
+    transform: scale(1.5) translateY(-2px);
+    color: #309BCA;
+}
+
 .textContainer {
     display: flex;
     flex-direction: row;
@@ -60,12 +77,12 @@ a {
     color: #309BCA;
     font-family: 'Hi Melody', cursive;
     font-weight: 900;
-    animation: fadein 0.5s;
+    animation: fadein 0.4s;
 }
 
 .textContainer__text--body {
     font-family: 'Open Sans Condensed', sans-serif;
-    animation: fadein 1s;
+    animation: fadein 0.4s;
 }
 
 @keyframes fadein {
@@ -126,7 +143,7 @@ a {
     background-color: #D1D2CC;
     transform: rotate(2.5deg);
     animation: rotate 3s infinite alternate;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 @keyframes rotate {
@@ -176,6 +193,10 @@ a {
 
 @media (min-width: 600px) { 
 
+    .breadCrumbs {
+        order: 5;
+    }
+
     .textContainer {
         height: 35vh;
         max-width: 80vw;
@@ -195,6 +216,7 @@ a {
         max-height: 425px;
         width: auto;
     }
+
 
 }
 
