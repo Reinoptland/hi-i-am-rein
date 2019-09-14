@@ -60,17 +60,18 @@ a {
     color: #309BCA;
     font-family: 'Hi Melody', cursive;
     font-weight: 900;
-    animation: fadein 2s;
+    animation: fadein 0.5s;
 }
 
 .textContainer__text--body {
     font-family: 'Open Sans Condensed', sans-serif;
-    animation: fadein 6s;
+    animation: fadein 1s;
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; transform: translateY(-2vh) }
+    80% { opacity: 0.8; transform: translateY(0.6vh) }
+    to   { opacity: 1; transform: translateY(0vh) }
 }
 
 .textContainer__arrow {
@@ -81,20 +82,19 @@ a {
 }
 
 @keyframes up-down {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+    0% { transform: translateY(-1vh); }
+    100% { transform: translateY(1vh); }
 }
 
-.textContainer__arrow:hover {
+.textContainer__arrow:focus,
+.textContainer__arrow:hover   {
     animation: left-right 0.5s infinite alternate;
 }
 
 @keyframes left-right {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-10px); }
+    0% { transform: translateX(-1vw); }
+    100% { transform: translateX(1vw); }
 }
-
-
 
 
 /* Make cool clip paths like these arrows at https://bennettfeely.com/clippy/ */
@@ -126,7 +126,7 @@ a {
     background-color: #D1D2CC;
     transform: rotate(2.5deg);
     animation: rotate 3s infinite alternate;
-    transition: 1.2s;
+    transition: 0.4s;
 }
 
 @keyframes rotate {
